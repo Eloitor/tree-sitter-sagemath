@@ -784,9 +784,10 @@ module.exports = grammar({
         [prec.left, '%', PREC.times],
         [prec.left, '//', PREC.times],
         [prec.right, '**', PREC.power],
+        [prec.right, '^', PREC.power],
         [prec.left, '|', PREC.bitwise_or],
         [prec.left, '&', PREC.bitwise_and],
-        [prec.left, '^', PREC.xor],
+        [prec.left, '^^', PREC.xor],
         [prec.left, '<<', PREC.shift],
         [prec.left, '>>', PREC.shift],
       ];
@@ -852,8 +853,8 @@ module.exports = grammar({
     augmented_assignment: $ => seq(
       field('left', $._left_hand_side),
       field('operator', choice(
-        '+=', '-=', '*=', '/=', '@=', '//=', '%=', '**=',
-        '>>=', '<<=', '&=', '^=', '|=',
+        '+=', '-=', '*=', '/=', '@=', '//=', '%=', '**=', '^=',
+        '>>=', '<<=', '&=', '^^=', '|=',
       )),
       field('right', $._right_hand_side),
     ),

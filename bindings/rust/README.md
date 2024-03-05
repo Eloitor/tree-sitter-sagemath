@@ -1,6 +1,6 @@
-# tree-sitter-python
+# tree-sitter-sagemath
 
-This crate provides a Python grammar for the [tree-sitter][] parsing library.
+This crate provides a Sagemath grammar for the [tree-sitter][] parsing library.
 To use this crate, add it to the `[dependencies]` section of your `Cargo.toml`
 file. (Note that you will probably also need to depend on the
 [`tree-sitter`][tree-sitter crate] crate to use the parsed result in any useful
@@ -9,7 +9,7 @@ way.)
 ```toml
 [dependencies]
 tree-sitter = "0.20.10"
-tree-sitter-python = "0.20.4"
+tree-sitter-sagemath = "0.20.4"
 ```
 
 Typically, you will use the [language][language func] function to add this
@@ -21,7 +21,7 @@ let code = r#"
         return x * 2
 "#;
 let mut parser = Parser::new();
-parser.set_language(tree_sitter_python::language()).expect("Error loading Python grammar");
+parser.set_language(tree_sitter_sagemath::language()).expect("Error loading Sagemath grammar");
 let parsed = parser.parse(code, None);
 ```
 

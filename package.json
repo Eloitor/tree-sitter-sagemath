@@ -1,14 +1,14 @@
 {
-  "name": "tree-sitter-python",
+  "name": "tree-sitter-sagemath",
   "version": "0.20.4",
-  "description": "Python grammar for tree-sitter",
+  "description": "Sagemath grammar for tree-sitter",
   "main": "bindings/node",
   "keywords": [
     "parser",
     "lexer",
-    "python"
+    "sagemath"
   ],
-  "author": "Max Brunsfeld",
+  "author": "Eloi Torrents",
   "license": "MIT",
   "dependencies": {
     "nan": "^2.18.0"
@@ -24,14 +24,14 @@
     "parse": "tree-sitter parse",
     "test": "tree-sitter test"
   },
-  "repository": "https://github.com/tree-sitter/tree-sitter-python",
+  "repository": "https://github.com/eloitor/tree-sitter-sagemath",
   "tree-sitter": [
     {
-      "scope": "source.python",
+      "scope": "source.sagemath",
       "file-types": [
-        "py"
+        "sage"
       ],
-      "injection-regex": "py",
+      "injection-regex": "sage",
       "highlights": [
         "queries/highlights.scm"
       ],

@@ -1,5 +1,5 @@
 {
-  "name": "python",
+  "name": "sagemath",
   "word": "identifier",
   "rules": {
     "module": {

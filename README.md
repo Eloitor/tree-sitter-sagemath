@@ -7,8 +7,8 @@ Sagemath grammar for [tree-sitter][].
 ## Differences from the Python grammar
 
 - [x] Parses exponent `^` and xor `^^`
-- [ ] Parses raw numbers  `939393R`
-- [ ] Methods can be called on integer and real literals `16.sqrt()`
+- [ ] Parses raw numbers  `939393R`. Distinguish between sage and python numbers
+- [ ] Methods can be called on sage numbers `16.sqrt()` or `16J.sqrt()` but not `16R.sqrt()`
 - [ ] Parses ellipsis `[1..10]`
 - [ ] Parses generators `G.0`
 - [ ] Parses generators constructor `ZZ.<x> = ZZ['x']`

@@ -1,4 +1,4 @@
-//! This crate provides Python language support for the [tree-sitter][] parsing library.
+//! This crate provides Sagemath language support for the [tree-sitter][] parsing library.
 //!
 //! Typically, you will use the [language][language func] function to add this language to a
 //! tree-sitter [Parser][], and then use the parser to parse some code:
@@ -9,7 +9,7 @@
 //!         return x * 2
 //! "#;
 //! let mut parser = tree_sitter::Parser::new();
-//! parser.set_language(&tree_sitter_python::language()).expect("Error loading Python grammar");
+//! parser.set_language(&tree_sitter_sagemath::language()).expect("Error loading Sagemath grammar");
 //! let tree = parser.parse(code, None).unwrap();
 //! assert!(!tree.root_node().has_error());
 //! ```

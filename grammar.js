@@ -1,5 +1,6 @@
 /**
- * @file Python grammar for tree-sitter
+ * @file Sagemath grammar for tree-sitter
+ * @author Eloi Torrents <eloitor@disroot.org>
  * @author Max Brunsfeld <maxbrunsfeld@gmail.com>
  * @license MIT
  * @see {@link https://docs.python.org/2/reference/grammar.html|Python 2 grammar}

@@ -5,7 +5,7 @@ using namespace v8;
 
 typedef struct TSLanguage TSLanguage;
 
-extern "C" const TSLanguage *tree_sitter_python(void);
+extern "C" const TSLanguage *tree_sitter_sagemath(void);
 
 namespace {
 
@@ -18,12 +18,12 @@ void Init(Local<Object> exports, Local<Object> module) {
 
     Local<Function> constructor = Nan::GetFunction(tpl).ToLocalChecked();
     Local<Object> instance = constructor->NewInstance(Nan::GetCurrentContext()).ToLocalChecked();
-    Nan::SetInternalFieldPointer(instance, 0, (void *)tree_sitter_python());
+    Nan::SetInternalFieldPointer(instance, 0, (void *)tree_sitter_sagemath());
 
-    Nan::Set(instance, Nan::New("name").ToLocalChecked(), Nan::New("python").ToLocalChecked());
+    Nan::Set(instance, Nan::New("name").ToLocalChecked(), Nan::New("sagemath").ToLocalChecked());
     Nan::Set(module, Nan::New("exports").ToLocalChecked(), instance);
 }
 
-NODE_MODULE_CONTEXT_AWARE(tree_sitter_python_binding, Init)
+NODE_MODULE_CONTEXT_AWARE(tree_sitter_sagemath_binding, Init)
 
 } // namespace

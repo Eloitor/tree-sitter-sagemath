@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "TreeSitterPython",
+    name: "TreeSitterSagemath",
     platforms: [.macOS(.v10_13), .iOS(.v11)],
     products: [
-        .library(name: "TreeSitterPython", targets: ["TreeSitterPython"]),
+        .library(name: "TreeSitterSagemath", targets: ["TreeSitterSagemath"]),
     ],
     dependencies: [],
     targets: [
-        .target(name: "TreeSitterPython",
+        .target(name: "TreeSitterSagemath",
                 path: ".",
                 exclude: [
                     "Cargo.toml",

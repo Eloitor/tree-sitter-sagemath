@@ -40,6 +40,7 @@ jobs:
           git clone https://github.com/django/django examples/django --depth=1 --filter=blob:none
           git clone https://github.com/pallets/flask examples/flask --depth=1 --filter=blob:none
           git clone https://github.com/python/cpython examples/cpython --depth=1 --filter=blob:none
+          tree-sitter generate
       - name: Run tests
         uses: tree-sitter/parser-test-action@v1.1
         with:

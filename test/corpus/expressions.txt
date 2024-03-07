@@ -400,6 +400,7 @@ Math operators
 ================================================================================
 
 a + b * c ** d - e / 5
+a + b * c ^ d - e / 5
 -5
 +x
 ~x
@@ -407,6 +408,18 @@ a + b * c ** d - e / 5
 --------------------------------------------------------------------------------
 
 (module
+  (expression_statement
+    (binary_operator
+      (binary_operator
+        (identifier)
+        (binary_operator
+          (identifier)
+          (binary_operator
+            (identifier)
+            (identifier))))
+      (binary_operator
+        (identifier)
+        (integer))))
   (expression_statement
     (binary_operator
       (binary_operator
@@ -473,8 +486,8 @@ Binary Addition / Subtraction With Floats
 Power Operator Precedence
 ================================================================================
 
-2**2**3
--2**2
+2^2^3
+-2^2
 
 --------------------------------------------------------------------------------
 
@@ -697,10 +710,15 @@ Augmented assignments
 a += 1
 b >>= 2
 c //= 1
+d ^= 2
 
 --------------------------------------------------------------------------------
 
 (module
+  (expression_statement
+    (augmented_assignment
+      (identifier)
+      (integer)))
   (expression_statement
     (augmented_assignment
       (identifier)
